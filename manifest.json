@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "Upwork CRM Saver",
+  "version": "1.0",
+  "description": "Add an 'Add to CRM' button to Upwork proposal pages.",
+  "permissions": ["storage", "scripting", "activeTab"],
+  "host_permissions": [
+    "https://xumevtuhzjdfspudceph.supabase.co/*",
+    "https://www.upwork.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://www.upwork.com/nx/proposals/job/*/apply/"],
+      "js": ["content.js", "supabase.js"]
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  }
+}

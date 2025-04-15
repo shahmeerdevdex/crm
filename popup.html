@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Upwork CRM Helper</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        width: 300px;
+        padding: 10px;
+      }
+      button {
+        margin: 5px 0;
+        padding: 8px 12px;
+        background-color: #00a36c;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        width: 100%;
+      }
+      input {
+        width: 100%;
+        padding: 8px 3px;
+        font-size: 14px;
+        margin: 5px 0;
+      }
+      .hidden {
+        display: none;
+      }
+      #login-container {
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="auth">
+      <div id="login-container">
+        <h3>Login</h3>
+
+        <input type="email" id="login-email" placeholder="Email" />
+        <input type="password" id="login-password" placeholder="Password" />
+        <button id="login-btn">Login</button>
+        <p id="status" style="color: green"></p>
+        <p style="width: 100%; text-align: center">
+          Don't have an account <a href="#" id="go-to-signup"> Sign Up</a>
+        </p>
+      </div>
+
+      <div id="signup-container" class="hidden">
+        <h3>Signup</h3>
+
+        <input type="email" id="signup-email" placeholder="Email" />
+        <input type="password" id="signup-password" placeholder="Password" />
+        <button id="signup-btn">Sign Up</button>
+        <p id="status-signup" style="color: green"></p>
+        <p style="width: 100%; text-align: center">
+          Already have an account <a href="#" id="go-to-login"> Login</a>
+        </p>
+      </div>
+    </div>
+
+    <div id="main" class="hidden">
+      <div id="user-info">
+        <p id="user-email"></p>
+        <button id="logout-btn">Logout</button>
+      </div>
+      <h3>Upwork CRM</h3>
+      <button id="goToUpwork">Open Upwork</button>
+    </div>
+
+    <script src="supabase.js"></script>
+    <script src="popup.js"></script>
+  </body>
+</html>
