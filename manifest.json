@@ -5,7 +5,7 @@
   "description": "Add an 'Add to CRM' button to Upwork proposal pages.",
   "permissions": ["storage", "scripting", "activeTab"],
   "host_permissions": [
-    "https://xumevtuhzjdfspudceph.supabase.co/*",
+    "https://zkckxbjmhjdzgoaibpfp.supabase.co/*",
     "https://www.upwork.com/*"
   ],
   "content_scripts": [

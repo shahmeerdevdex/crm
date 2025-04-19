@@ -1,7 +1,7 @@
 // Supabase client configuration
-const SUPABASE_URL = "https://xumevtuhzjdfspudceph.supabase.co";
+const SUPABASE_URL = "https://zkckxbjmhjdzgoaibpfp.supabase.co/";
 const SUPABASE_ANON_KEY =
-  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inh1bWV2dHVoempkZnNwdWRjZXBoIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDExMDYxNDUsImV4cCI6MjA1NjY4MjE0NX0.8Bk6A60nm-V-DlsrmKFTbneWwQeQ_UOy6n8DZJ5DlNc";
+  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InprY2t4YmptaGpkemdvYWlicGZwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDUwOTQ0NzYsImV4cCI6MjA2MDY3MDQ3Nn0.y_vl3tSzNTVA1GK559Kq59P8xD32MvJWW83om6RMDRk";
 
 // Create Supabase client
 

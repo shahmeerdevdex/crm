@@ -94,30 +94,29 @@ function getJobDetails() {
     });
   }
 
-  const bidStats = document.querySelector(
-    "[data-test='number-of-proposals']"
-  )?.innerText;
-
   return {
     title,
     description,
-    hourlyRate,
-    recievedHourlyRate,
-    milestoneMode,
-    milestoneDetails,
-    projectRate,
-    projectDuration,
-    recievedProjectRate,
+    hourly_rate: hourlyRate,
+    recieved_hourly_rate: recievedHourlyRate,
+    mode: milestoneMode,
+    milestone_details: JSON.stringify(milestoneDetails),
+    project_rate: projectRate,
+    recieved_project_rate: recievedProjectRate,
+    project_duration: projectDuration,
     proposal,
-    boostedConnects,
-    requiredConnects,
-    connectsUsed: requiredConnects + parseInt(boostedConnects),
-    bidStats,
+    boosted_connects: boostedConnects,
+    required_connects: requiredConnects,
+    total_connect_used: requiredConnects + parseInt(boostedConnects),
     url: window.location.href,
   };
 }
 
-function addButton() {
+async function addButton() {
+  const {
+    data: { session },
+  } = await window.supabaseClient.auth.getSession();
+  if (!session) return;
   if (document.getElementById("addToCrmBtn")) return;
 
   const submitSection = document.querySelector(
@@ -148,7 +147,7 @@ function addButton() {
     } = await window.supabaseClient.auth.getSession();
     if (session) {
       const { data: crmData, error } = await window.supabaseClient
-        .from("crm")
+        .from("proposals")
         .insert({
           ...jobData,
           user_id: session.user.id,
